@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../../static/style/css/main.css" />
+
+    <title>test</title>
+  </head>
+  <body>
+    {% include "./components/header.html" %}
+
+    <div class="card-detail">
+      <img src="{{ product_detail.image }}" alt="article" />
+      <div class="card-detail-description">
+        <div>
+          <h2>{{ product_detail.name }}</h2>
+          <span>{{ product_detail.price }} $</span>
+        </div>
+        <div>
+          <div class="number-input">
+            <button
+              class="button-input-quantity"
+              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+            >
+              -
+            </button>
+            <input
+              class="input-quantity"
+              type="number"
+              value="1"
+              min="1"
+              max="{{ product_detail.stock }}"
+            />
+            <button
+              class="button-input-quantity"
+              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+            >
+              +
+            </button>
+          </div>
+          <button class="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

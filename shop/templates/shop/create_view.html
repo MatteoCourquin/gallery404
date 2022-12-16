@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../../static/style/css/main.css" />
+
+    <title></title>
+  </head>
+  <body>
+    {% include "./components/header.html" %}
+
+    <form method="POST" enctype="multipart/form-data">
+      <!-- Security token -->
+      {% csrf_token %}
+
+      <!-- Using the formset -->
+      {{ form.as_p }}
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

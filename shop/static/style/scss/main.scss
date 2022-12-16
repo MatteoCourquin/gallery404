@@ -1,0 +1,40 @@
+// **** ABSTRACTS **** //
+// =================== //
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
+@import "./abstracts/functions";
+
+// **** BASE **** //
+// ============== //
+@import "./base/reset";
+@import "./base/typography";
+
+// **** COMPONENTS **** //
+// ==================== //
+@import "./components/buttons";
+@import "./components/inputs";
+@import "./components/cards";
+@import "./components/carousel";
+@import "./components/cover";
+@import "./components/dropdown";
+
+// **** PAGES **** //
+// =============== //
+@import "./pages/page";
+
+// **** SECTIONS **** //
+// ================== //
+@import "./sections/footer";
+@import "./sections/header";
+
+// **** THEMES **** //
+// ================ //
+@import "./themes/theme";
+
+// **** VENDORS **** //
+// =================== //
+@import "./vendors/greensocks";
+
+
+// sass --watch assets/style/scss/main.scss:assets/style/css/main.css

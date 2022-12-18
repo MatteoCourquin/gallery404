@@ -20,12 +20,23 @@
   <body>
     {% include "./components/header.html" %}
 
+
     <div class="card-detail">
       <img src="{{ product_detail.image }}" alt="article" />
       <div class="card-detail-description">
         <div>
           <h2>{{ product_detail.name }}</h2>
           <span>{{ product_detail.price }} $</span>
+          {% if product_detail.stock <= 0 %}
+          <span class="sold-out">sold out</span>
+          {% elif product_detail.stock < 5 %}
+          <span class="low-stock">low stock : {{product_detail.stock}}</span>
+          {% endif %}
+        </div>
+        <div>
+          <a href="/shop/{{ product_detail.id }}/delete">delete</a>
+          <span>|</span>
+          <a href="/shop/{{ product_detail.id }}/update">update</a>
         </div>
         <div>
           <div class="number-input">

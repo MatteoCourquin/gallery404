@@ -134,6 +134,12 @@ a {
   padding: 15px;
   color: #fff;
 }
+.gallery .card-gallery .card-gallery-hidden h3 {
+  text-transform: capitalize;
+}
+.gallery .card-gallery .card-gallery-hidden a {
+  position: absolute;
+}
 .gallery .card-gallery .card-gallery-hidden span {
   font-weight: 100;
 }
@@ -154,6 +160,15 @@ a {
   width: 70%;
   max-height: 700px;
   object-fit: cover;
+}
+.card-detail .sold-out {
+  color: #ff0000;
+}
+.card-detail .low-stock {
+  color: #ff0000;
+}
+.card-detail h2 {
+  text-transform: capitalize;
 }
 @media screen and (max-width: 768px) {
   .card-detail {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../../static/style/css/main.css" />
+
+    <title>delete</title>
+  </head>
+  <body>
+    {% include "./components/header.html" %}
+
+    <div class="main">
+      <!-- Create a Form -->
+      <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+    
+        <!-- form as paragraph -->
+        {{ form.as_p }}
+    
+        <input type="submit" value="Delete">
+      </form>
+    
+    </div>
+    
+  </body>
+</html>
